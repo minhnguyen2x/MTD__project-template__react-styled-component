@@ -13,15 +13,24 @@ const GlobalStyles = createGlobalStyle`
 *::after {
   margin: 0;
   padding: 0;
+  border:0;
   box-sizing: border-box;
 }
+
+:root {
+}
+
+html {
+  font-size:62.5%
+}
+
 body {
   background-color: #fbfbfb;
   color: #fff;
-  font-family: monospace;
   overflow-x: hidden;
+  font-family: monospace;
+  font-size:1.6rem;
 }
-
 `;
 
 function App() {
