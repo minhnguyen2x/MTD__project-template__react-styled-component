@@ -8,12 +8,20 @@ import { createGlobalStyle } from 'styled-components';
 import { getTheme } from './constants/theme';
 import { ThemeProvider } from 'styled-components';
 const GlobalStyles = createGlobalStyle`
-  *{
-    box-sizing:border-box;
-    margin:0;
-    padding:0;
-    border:0;
-  }
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: #fbfbfb;
+  color: #fff;
+  font-family: monospace;
+  overflow-x: hidden;
+}
+
 `;
 
 function App() {
