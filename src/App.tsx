@@ -28,7 +28,6 @@ body {
   background-color: #fbfbfb;
   color: #fff;
   overflow-x: hidden;
-  font-family: monospace;
   font-size:1.6rem;
 }
 `;

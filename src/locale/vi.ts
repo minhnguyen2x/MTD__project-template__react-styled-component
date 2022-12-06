@@ -1,4 +1,16 @@
 export default {
-  header_search_placeholder: 'Tìm kiếm sản phẩm...',
-  header_search_button: 'Tìm kiếm',
+  header_cart_quick_link: 'Giỏ hàng',
+  header_sign_in_quick_link: 'Đăng nhập',
+  header_mall_channel: 'Kênh người bán',
+  header_for_seller: 'Trở thành Người bán MTD-Ecommerce',
+  header_download: 'Tải ứng dụng',
+  header_notify: 'Thông Báo',
+  header_support: 'Hỗ Trợ',
+  header_current_lang: 'Tiếng Việt',
+  header_lang_vi: 'Tiếng Việt',
+  header_lang_en: 'English',
+  header_register: 'Đăng Ký',
+  header_login: 'Đăng Nhập',
+  header_logo_text: 'MTD-Ecommerce',
+  header_search_placeholder: 'Đăng ký và nhận voucher lên đến 1 tỷ đồng',
 };
