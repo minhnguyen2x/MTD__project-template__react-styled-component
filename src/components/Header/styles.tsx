@@ -1,6 +1,5 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import Icon from '@reacticons/ionicons';
 
 export const HeaderContainer = styled.header`
   padding: 10px 150px;
@@ -79,7 +78,3 @@ export const HeaderText = styled.p`
 interface IconProps {
   iconSize?: string;
 }
-
-export const IonIcon = styled(Icon)<IconProps>`
-  font-size: ${(props: any) => (props.iconSize ? props.iconSize : '20px')};
-`;
