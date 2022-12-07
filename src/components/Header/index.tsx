@@ -9,12 +9,34 @@ import {
   HeaderLeftContainer,
   HeaderRightContainer,
   HeaderQuickLink,
+  HeaderQuickLinkWithLogo,
   HeaderQuickLinkLogo,
   HeaderText,
 } from './styles';
 import { useTranslations } from '../../utils/intlTools';
 import { ROUTES } from '~/constants/routes';
 import Search from './Search';
+import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
+import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+
+import Switch from '@mui/material/Switch';
+
+export function ControlledSwitches() {
+  const [checked, setChecked] = React.useState(true);
+
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setChecked(event.target.checked);
+  };
+
+  return (
+    <Switch
+      checked={checked}
+      onChange={handleChange}
+      inputProps={{ 'aria-label': 'controlled' }}
+    />
+  );
+}
 
 const quickLinks = {};
 
@@ -52,6 +74,7 @@ const Header = () => {
     'header_logo_text',
     'header_search_placeholder',
   ]);
+
   return (
     <HeaderContainer>
       <HeaderTopContainer>
@@ -67,13 +90,15 @@ const Header = () => {
           </HeaderQuickLink>
         </HeaderLeftContainer>
         <HeaderRightContainer>
-          <HeaderQuickLink to={ROUTES.NOTIFICATION}>
+          <HeaderQuickLinkWithLogo to={ROUTES.NOTIFICATION}>
+            <NotificationsNoneIcon />
             <HeaderText>{header_notify}</HeaderText>
-          </HeaderQuickLink>
-          <HeaderQuickLink to={ROUTES.HEP}>
+          </HeaderQuickLinkWithLogo>
+          <HeaderQuickLinkWithLogo to={ROUTES.HEP}>
+            <HelpOutlineIcon />
             <HeaderText>{header_support}</HeaderText>
-          </HeaderQuickLink>
-          <HeaderText>{header_current_lang}</HeaderText>
+          </HeaderQuickLinkWithLogo>
+
           <HeaderQuickLink to={ROUTES.REGISTER}>
             <HeaderText>{header_register}</HeaderText>
           </HeaderQuickLink>
@@ -82,14 +107,15 @@ const Header = () => {
           </HeaderQuickLink>
         </HeaderRightContainer>
       </HeaderTopContainer>
-
       <HeaderBottomContainer>
         <HeaderQuickLinkLogo to={ROUTES.HOME}>
           <HeaderLogo>{header_logo_text}</HeaderLogo>
         </HeaderQuickLinkLogo>
         <Search />
         <HeaderQuickLink to={ROUTES.CART}>
-          <HeaderText>{header_cart_quick_link}</HeaderText>
+          <HeaderText>
+            <ShoppingCartOutlinedIcon />
+          </HeaderText>
         </HeaderQuickLink>
       </HeaderBottomContainer>
     </HeaderContainer>

@@ -4,33 +4,9 @@ import { store } from './store';
 import Router from './Router';
 import ConnectedIntlProvider from './ConnectedIntl';
 import { LANG_KEY } from './constants/locale';
-import { createGlobalStyle } from 'styled-components';
 import { getTheme } from './constants/theme';
 import { ThemeProvider } from 'styled-components';
-const GlobalStyles = createGlobalStyle`
-*,
-*::before,
-*::after {
-  margin: 0;
-  padding: 0;
-  border:0;
-  box-sizing: border-box;
-}
-
-:root {
-}
-
-html {
-  font-size:62.5%
-}
-
-body {
-  background-color: #fbfbfb;
-  color: #fff;
-  overflow-x: hidden;
-  font-size:1.6rem;
-}
-`;
+import GlobalStyles from './components/GlobalStyles';
 
 function App() {
   return (

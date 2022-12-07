@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import Icon from '@reacticons/ionicons';
 
 export const HeaderContainer = styled.header`
   padding: 10px 150px;
@@ -20,6 +21,7 @@ export const HeaderBottomContainer = styled.div`
 export const HeaderLeftContainer = styled.div`
   display: flex;
   gap: 20px;
+  align-items: center;
 `;
 
 export const HeaderLogo = styled.p`
@@ -34,11 +36,30 @@ export const HeaderSearchButton = styled.button``;
 export const HeaderRightContainer = styled.div`
   display: flex;
   gap: 20px;
+  align-items: center;
 `;
 
 export const HeaderQuickLink = styled(Link)`
   text-decoration: none;
   & p:hover {
+    color: ${(props) => props.theme.textWhiteHover};
+    pointer: cursor;
+  }
+`;
+export const HeaderQuickLinkWithLogo = styled(Link)`
+  text-decoration: none;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+
+  &:link,
+  &:visited,
+  &:focus,
+  &:active {
+    color: ${(props) => props.theme.textWhite};
+  }
+
+  &:hover * {
     color: ${(props) => props.theme.textWhiteHover};
     pointer: cursor;
   }
@@ -53,4 +74,12 @@ export const HeaderQuickLinkLogo = styled(Link)`
 export const HeaderText = styled.p`
   color: ${(props) => props.theme.textWhite};
   font-size: ${(props) => props.theme.fontSizePrimary};
+`;
+
+interface IconProps {
+  iconSize?: string;
+}
+
+export const IonIcon = styled(Icon)<IconProps>`
+  font-size: ${(props: any) => (props.iconSize ? props.iconSize : '20px')};
 `;

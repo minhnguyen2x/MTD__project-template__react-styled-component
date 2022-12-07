@@ -2,6 +2,7 @@ import React from 'react';
 import { Formik, Form, Field } from 'formik';
 import { SearchInput, SearchForm, SearchButton } from './styles';
 import { useTranslations } from '~/utils/intlTools';
+import SearchIcon from '@mui/icons-material/Search';
 
 import * as Yup from 'yup';
 
@@ -19,7 +20,9 @@ const index = () => {
             type="text"
             placeholder={header_search_placeholder}
           />
-          <SearchButton>Search</SearchButton>
+          <SearchButton>
+            <SearchIcon />
+          </SearchButton>
         </SearchForm>
       )}
     </Formik>
