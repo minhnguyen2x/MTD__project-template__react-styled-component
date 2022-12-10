@@ -21,7 +21,7 @@ const index = () => {
             placeholder={header_search_placeholder}
           />
           <SearchButton>
-            <SearchIcon />
+            <SearchIcon fontSize="large" />
           </SearchButton>
         </SearchForm>
       )}

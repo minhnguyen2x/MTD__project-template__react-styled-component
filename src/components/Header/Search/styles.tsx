@@ -27,6 +27,8 @@ export const SearchButton = styled.button`
   border-radius: 3px;
   color: ${(props) => props.theme.textWhite};
   background-color: ${(props) => props.theme.headerBackgroundColor};
+  display: flex;
+  align-items: center;
 
   &:hover {
     background-color: ${(props) => props.theme.orangeBackgroundHover};
