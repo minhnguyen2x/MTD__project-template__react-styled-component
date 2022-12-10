@@ -1,3 +1,5 @@
+import { createTheme } from '@mui/material';
+
 const theme = {
   headerBackgroundColor: '#fb5533',
   orangeBackgroundHover: '#ee5130',
@@ -12,5 +14,6 @@ const theme = {
 };
 
 export const getTheme = () => {
-  return { ...theme };
+  const materialUITheme = createTheme({});
+  return { ...theme, ...materialUITheme };
 };

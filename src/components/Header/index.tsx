@@ -4,8 +4,6 @@ import {
   HeaderTopContainer,
   HeaderBottomContainer,
   HeaderLogo,
-  HeaderSearchInput,
-  HeaderSearchButton,
   HeaderLeftContainer,
   HeaderRightContainer,
   HeaderQuickLink,
@@ -19,7 +17,7 @@ import Search from './Search';
 import NotificationsNoneIcon from '@mui/icons-material/NotificationsNone';
 import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
 import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
-
+import LangSelect from './LangSelect';
 import Switch from '@mui/material/Switch';
 
 export function ControlledSwitches() {
@@ -94,11 +92,11 @@ const Header = () => {
             <NotificationsNoneIcon />
             <HeaderText>{header_notify}</HeaderText>
           </HeaderQuickLinkWithLogo>
+          <LangSelect />
           <HeaderQuickLinkWithLogo to={ROUTES.HEP}>
             <HelpOutlineIcon />
             <HeaderText>{header_support}</HeaderText>
           </HeaderQuickLinkWithLogo>
-
           <HeaderQuickLink to={ROUTES.REGISTER}>
             <HeaderText>{header_register}</HeaderText>
           </HeaderQuickLink>
