@@ -3,20 +3,28 @@ import { Formik, Form, Field } from 'formik';
 import { SearchInput, SearchForm, SearchButton } from './styles';
 import { useTranslations } from '~/utils/intlTools';
 import SearchIcon from '@mui/icons-material/Search';
-
-import * as Yup from 'yup';
+import {
+  useStates as useSearchStates,
+  useActions as useSearchActions,
+} from '../../../store/model/search';
 
 const index = () => {
   const [header_search_placeholder] = useTranslations([
     'header_search_placeholder',
   ]);
-
+  const { searchKeyword } = useSearchStates();
+  const { fetchSearch } = useSearchActions();
   return (
-    <Formik initialValues={{ searchValue: '' }} onSubmit={() => {}}>
+    <Formik
+      initialValues={{ searchKeyword }}
+      onSubmit={({ searchKeyword }) => {
+        fetchSearch(searchKeyword);
+      }}
+    >
       {(formik) => (
         <SearchForm>
           <SearchInput
-            name="searchValue"
+            name="searchKeyword"
             type="text"
             placeholder={header_search_placeholder}
           />

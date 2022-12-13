@@ -1,4 +1,4 @@
-export default {
+const EnglishTranslation = {
   header_search_button: 'SEARCH',
   header_cart_quick_link: 'CART',
   header_sign_in_quick_link: 'SIGN IN',
@@ -15,3 +15,6 @@ export default {
   header_logo_text: 'MTD-Ecommerce',
   header_search_placeholder: 'Register to receive voucher 1 billiton VND',
 };
+export type Translation = typeof EnglishTranslation;
+
+export default EnglishTranslation;

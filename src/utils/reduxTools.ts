@@ -1,14 +1,13 @@
 import { createAction } from '@reduxjs/toolkit';
 
-export const createModuleAction = <T>(
-  moduleName: string,
-  actionName: string,
-) => {
+export const createModuleAction = (moduleName: string, actionName: string) => {
   return {
-    request: createAction(`${moduleName}:${actionName}:REQUEST`),
-    error: createAction(`${moduleName}:${actionName}:ERROR`),
-    success: createAction<T>(`${moduleName}:${actionName}:SUCCESS`),
+    request: createAction<any>(`${moduleName}:${actionName}:REQUEST`),
+    success: createAction<any>(`${moduleName}:${actionName}:SUCCESS`),
+    error: createAction<any>(`${moduleName}:${actionName}:ERROR`),
   };
 };
 
-export const createSagaHandler = (fn: Function) => fn;
+export const createSagaHandler = function (gf: any) {
+  return gf;
+};
