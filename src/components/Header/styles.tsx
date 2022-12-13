@@ -40,6 +40,8 @@ export const HeaderRightContainer = styled.div`
 
 export const HeaderQuickLink = styled(Link)`
   text-decoration: none;
+  display: flex;
+  align-items: center;
   & p:hover {
     color: ${(props) => props.theme.textWhiteHover};
     pointer: cursor;
@@ -74,7 +76,3 @@ export const HeaderText = styled.p`
   color: ${(props) => props.theme.textWhite};
   font-size: ${(props) => props.theme.fontSizePrimary};
 `;
-
-interface IconProps {
-  iconSize?: string;
-}

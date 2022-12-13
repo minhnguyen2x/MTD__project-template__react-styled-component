@@ -5,7 +5,7 @@ export const ROUTES = {
   SELLER: '/seller',
   DOWNLOAD: '/download',
   NOTIFICATION: '/notifications',
-  HEP: '/help',
+  HELP: '/help',
   REGISTER: '/register',
   LOGIN: '/login',
 };

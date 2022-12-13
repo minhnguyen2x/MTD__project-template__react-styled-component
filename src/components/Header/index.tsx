@@ -93,7 +93,7 @@ const Header = () => {
             <HeaderText>{header_notify}</HeaderText>
           </HeaderQuickLinkWithLogo>
           <LangSelect />
-          <HeaderQuickLinkWithLogo to={ROUTES.HEP}>
+          <HeaderQuickLinkWithLogo to={ROUTES.HELP}>
             <HelpOutlineIcon />
             <HeaderText>{header_support}</HeaderText>
           </HeaderQuickLinkWithLogo>
@@ -112,7 +112,7 @@ const Header = () => {
         <Search />
         <HeaderQuickLink to={ROUTES.CART}>
           <HeaderText>
-            <ShoppingCartOutlinedIcon />
+            <ShoppingCartOutlinedIcon fontSize="large" />
           </HeaderText>
         </HeaderQuickLink>
       </HeaderBottomContainer>
